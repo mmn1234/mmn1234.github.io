@@ -24,6 +24,29 @@
             font-size: 2em;
             font-weight: bold;
         }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            color: #42a5f5;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .back-button:hover {
+            background-color: #e3f2fd;
+            transform: scale(1.1);
+        }
         .form-container {
             max-width: 600px;
             margin: 40px auto;
@@ -58,6 +81,9 @@
     <header>
         <h1>Submit Suggestions</h1>
     </header>
+
+    <a href="index.html" class="back-button">&#x2190;</a>
+
     <div class="form-container">
         <h2>We Value Your Suggestions</h2>
         <p>Please use the form below to submit your ideas for new restaurants or improvements.</p>
