@@ -13,33 +13,48 @@
             background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
         }
         header {
-            text-align: center;
-            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
             background-color: #42a5f5;
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 2em;
             font-weight: bold;
         }
-        header p {
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
             font-size: 1.2em;
-            margin-top: 10px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #bbdefb;
         }
         .intro {
             text-align: center;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2em;
-            line-height: 1.5em;
-            border-bottom: 2px solid #2196f3;
-            background-image: url('https://source.unsplash.com/1600x400/?appetizing-food');
+            padding: 100px 20px;
+            background-image: url('https://source.unsplash.com/1600x400/?food,restaurant');
             background-size: cover;
             background-position: center;
             color: white;
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .intro h2 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .intro p {
+            font-size: 1.5em;
+            margin: 20px 0;
         }
         .buttons {
             display: flex;
@@ -68,11 +83,16 @@
 </head>
 <body>
     <header>
-        <h1>NYUAD Information</h1>
-        <p>Your guide to dining and transportation</p>
+        <h1>NYUAD Info</h1>
+        <nav>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="shuttle.html">Shuttle Timings</a>
+            <a href="suggestions.html">Submit Suggestions</a>
+        </nav>
     </header>
     <div class="intro">
-        <p>Welcome to the NYUAD Information Portal! Here, you'll find everything you need to know about cheap dining options and transportation schedules around Abu Dhabi. Navigate below to explore restaurants, shuttle timings, or submit your suggestions.</p>
+        <h2>Welcome to NYUAD Information Portal</h2>
+        <p>Your guide to dining and transportation in Abu Dhabi</p>
     </div>
     <div class="buttons">
         <a href="restaurants.html">Restaurants</a>
