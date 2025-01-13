@@ -10,49 +10,47 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background: linear-gradient(to bottom, #f3e5f5, #e1bee7);
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: #ce93d8;
+            background-color: #42a5f5;
             color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        form {
-            max-width: 500px;
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .form-container {
+            max-width: 600px;
             margin: 40px auto;
             padding: 20px;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        form h2 {
-            margin-bottom: 20px;
-            color: #ba68c8;
             text-align: center;
         }
-        textarea {
-            width: 100%;
-            height: 150px;
+        .form-container h2 {
             margin-bottom: 20px;
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            color: #42a5f5;
+            font-size: 1.8em;
         }
-        button {
+        iframe {
             width: 100%;
-            padding: 10px;
-            background-color: #ba68c8;
-            color: white;
-            font-size: 1.2em;
+            height: 500px;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        button:hover {
-            background-color: #9c27b0;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #42a5f5;
+            color: white;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -60,6 +58,13 @@
     <header>
         <h1>Submit Suggestions</h1>
     </header>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdo_vaFfz3dhBvp0u2YwgaHH5dP6Q7S6-hgHHYG7Ct4vS3r_w/viewform?embedded=true" width="640" height="595" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="form-container">
+        <h2>We Value Your Suggestions</h2>
+        <p>Please use the form below to submit your ideas for new restaurants or improvements.</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdo_vaFfz3dhBvp0u2YwgaHH5dP6Q7S6-hgHHYG7Ct4vS3r_w/viewform?embedded=true"></iframe>
+    </div>
+    <footer>
+        <p>&copy; 2025 NYUAD Information Portal</p>
+    </footer>
 </body>
 </html>
