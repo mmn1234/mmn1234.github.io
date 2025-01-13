@@ -24,25 +24,38 @@
             font-size: 2em;
             font-weight: bold;
         }
+        h2 {
+            text-align: center;
+            color: #42a5f5;
+            margin-top: 20px;
+        }
         table {
             width: 90%;
             margin: 20px auto;
             border-collapse: collapse;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
         }
-        th, td {
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-        th {
+        thead {
             background-color: #42a5f5;
             color: white;
         }
-        h2 {
+        th, td {
+            padding: 15px;
             text-align: center;
-            color: #42a5f5;
-            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        th {
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f0f7ff;
+        }
+        tbody tr:hover {
+            background-color: #dbe9f9;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -53,104 +66,116 @@
 
     <h2>Central Souk - Al Wahda - Galleria Mall Route (Daily)</h2>
     <table>
-        <tr>
-            <th>Departs From</th>
-            <th>Arrives At</th>
-            <th>Departure Time</th>
-            <th>Arrival Time</th>
-        </tr>
-        <tr>
-            <td>Saadiyat Campus</td>
-            <td>Central Souk</td>
-            <td>7:55 AM</td>
-            <td>8:10 AM</td>
-        </tr>
-        <tr>
-            <td>Central Souk</td>
-            <td>Al Wahda Mall</td>
-            <td>8:12 AM</td>
-            <td>8:20 AM</td>
-        </tr>
-        <tr>
-            <td>Al Wahda Mall</td>
-            <td>Galleria Mall</td>
-            <td>8:22 AM</td>
-            <td>8:32 AM</td>
-        </tr>
-        <tr>
-            <td>Galleria Mall</td>
-            <td>Saadiyat Campus</td>
-            <td>8:35 AM</td>
-            <td>8:50 AM</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Departs From</th>
+                <th>Arrives At</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Saadiyat Campus</td>
+                <td>Central Souk</td>
+                <td>7:55 AM</td>
+                <td>8:10 AM</td>
+            </tr>
+            <tr>
+                <td>Central Souk</td>
+                <td>Al Wahda Mall</td>
+                <td>8:12 AM</td>
+                <td>8:20 AM</td>
+            </tr>
+            <tr>
+                <td>Al Wahda Mall</td>
+                <td>Galleria Mall</td>
+                <td>8:22 AM</td>
+                <td>8:32 AM</td>
+            </tr>
+            <tr>
+                <td>Galleria Mall</td>
+                <td>Saadiyat Campus</td>
+                <td>8:35 AM</td>
+                <td>8:50 AM</td>
+            </tr>
+        </tbody>
     </table>
 
     <h2>Yas Mall Route (Daily)</h2>
     <table>
-        <tr>
-            <th>Departs From</th>
-            <th>Arrives At</th>
-            <th>Departure Time</th>
-            <th>Arrival Time</th>
-        </tr>
-        <tr>
-            <td>Saadiyat Campus</td>
-            <td>Yas Mall</td>
-            <td>9:30 AM</td>
-            <td>9:50 AM</td>
-        </tr>
-        <tr>
-            <td>Yas Mall</td>
-            <td>Saadiyat Campus</td>
-            <td>11:00 AM</td>
-            <td>11:20 AM</td>
-        </tr>
-        <tr>
-            <td>Saadiyat Campus</td>
-            <td>Yas Mall</td>
-            <td>4:10 PM</td>
-            <td>4:30 PM</td>
-        </tr>
-        <tr>
-            <td>Yas Mall</td>
-            <td>Saadiyat Campus</td>
-            <td>5:30 PM</td>
-            <td>5:50 PM</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Departs From</th>
+                <th>Arrives At</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Saadiyat Campus</td>
+                <td>Yas Mall</td>
+                <td>9:30 AM</td>
+                <td>9:50 AM</td>
+            </tr>
+            <tr>
+                <td>Yas Mall</td>
+                <td>Saadiyat Campus</td>
+                <td>11:00 AM</td>
+                <td>11:20 AM</td>
+            </tr>
+            <tr>
+                <td>Saadiyat Campus</td>
+                <td>Yas Mall</td>
+                <td>4:10 PM</td>
+                <td>4:30 PM</td>
+            </tr>
+            <tr>
+                <td>Yas Mall</td>
+                <td>Saadiyat Campus</td>
+                <td>5:30 PM</td>
+                <td>5:50 PM</td>
+            </tr>
+        </tbody>
     </table>
 
     <h2>Spinneys - Mamsha - Louvre Route (Daily)</h2>
     <table>
-        <tr>
-            <th>Departs From</th>
-            <th>Arrives At</th>
-            <th>Departure Time</th>
-            <th>Arrival Time</th>
-        </tr>
-        <tr>
-            <td>Saadiyat Campus</td>
-            <td>Spinneys</td>
-            <td>10:30 AM</td>
-            <td>10:38 AM</td>
-        </tr>
-        <tr>
-            <td>Spinneys</td>
-            <td>Mamsha</td>
-            <td>10:40 AM</td>
-            <td>10:48 AM</td>
-        </tr>
-        <tr>
-            <td>Mamsha</td>
-            <td>Louvre</td>
-            <td>10:50 AM</td>
-            <td>10:56 AM</td>
-        </tr>
-        <tr>
-            <td>Louvre</td>
-            <td>Saadiyat Campus</td>
-            <td>11:00 AM</td>
-            <td>11:10 AM</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Departs From</th>
+                <th>Arrives At</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Saadiyat Campus</td>
+                <td>Spinneys</td>
+                <td>10:30 AM</td>
+                <td>10:38 AM</td>
+            </tr>
+            <tr>
+                <td>Spinneys</td>
+                <td>Mamsha</td>
+                <td>10:40 AM</td>
+                <td>10:48 AM</td>
+            </tr>
+            <tr>
+                <td>Mamsha</td>
+                <td>Louvre</td>
+                <td>10:50 AM</td>
+                <td>10:56 AM</td>
+            </tr>
+            <tr>
+                <td>Louvre</td>
+                <td>Saadiyat Campus</td>
+                <td>11:00 AM</td>
+                <td>11:10 AM</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
