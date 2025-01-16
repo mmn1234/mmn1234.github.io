@@ -73,31 +73,31 @@
         }
         .restaurants {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             width: 100%;
             max-width: 1200px;
-            justify-content: center;
-        }
-        .restaurants .restaurant:nth-last-child(1),
-        .restaurants .restaurant:nth-last-child(2) {
-            grid-column: span 3;
-            display: flex;
-            justify-content: center;
         }
         .restaurant {
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .restaurant:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
         .dish-pic {
             margin-top: 10px;
-            width: 150px;
-            height: 100px;
+            width: 100%;
+            max-width: 250px;
+            height: 150px;
             object-fit: cover;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .restaurant h3 {
             margin: 10px 0 5px;
@@ -222,6 +222,22 @@
                 <p>Best pastries and baked goods in town.</p>
                 <img class="dish-pic" src="images/manakish.jpg" alt="Cheese Manakish">
                 <p class="dish">Famous Dish: Cheese Manakish</p>
+            </div>
+        </div>
+
+        <div class="legend-and-map">
+            <div id="legend">
+                <h2>Legend</h2>
+                <ul>
+                    <li><img src="images/1046784.png" alt="Burger"> Fast food restaurants</li>
+                    <li><img src="images/cupcake.png" alt="Cupcake"> Dessert shops</li>
+                    <li><img src="images/coffeepic.png" alt="Dine In"> Cozy cafes</li>
+                    <li><img src="images/shawarma1.png" alt="Arab Food"> Traditional Arab food</li>
+                    <li><img src="images/newdesi.png" alt="Desi Food"> Desi food</li>
+                </ul>
+            </div>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1K6f4NIDxnYDntAB-cCwh8kpUMOfQAlw&ehbc=2E312F&noprof=1"></iframe>
             </div>
         </div>
     </main>
