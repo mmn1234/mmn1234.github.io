@@ -6,24 +6,23 @@
     <title>Shuttle Timings</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            background: url('https://img.freepik.com/free-photo/top-view-wooden-texture-background-with-copy-space_23-2148726378.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
         }
         header {
             text-align: center;
-            padding: 80px 20px 40px;
+            padding: 20px;
+            background-color: #42a5f5;
             color: white;
-            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-            background-color: rgba(0, 0, 0, 0.6);
-            border-bottom: 2px solid #42a5f5;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         header h1 {
-            font-size: 3em;
             margin: 0;
+            font-size: 2em;
+            font-weight: bold;
         }
         .back-button {
             position: absolute;
@@ -43,28 +42,19 @@
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s, transform 0.2s;
-            z-index: 99;
         }
         .back-button:hover {
             background-color: #e3f2fd;
             transform: scale(1.1);
         }
-        main {
-            margin: 20px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
         h2 {
             text-align: center;
             color: #42a5f5;
-            font-size: 1.8em;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
         table {
-            width: 100%;
-            margin: 20px 0;
+            width: 90%;
+            margin: 20px auto;
             border-collapse: collapse;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             background: #fff;
@@ -88,120 +78,203 @@
             background-color: #dbe9f9;
             cursor: pointer;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            font-size: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="index.html" class="back-button">&#x2190;</a>
-
     <header>
         <h1>Shuttle Timings</h1>
     </header>
 
-    <main>
-        <h2>Central Souk - Al Wahda - Galleria Mall Route (Daily)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Departs From Saadiyat Campus</th>
-                    <th>Arrives At Central Souk</th>
-                    <th>Departs From Central Souk</th>
-                    <th>Arrives At Al Wahda Mall</th>
-                    <th>Departs From Al Wahda Mall</th>
-                    <th>Arrives At Galleria Mall</th>
-                    <th>Departs From Galleria Mall</th>
-                    <th>Arrives At Saadiyat Campus</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>7:55 AM</td>
-                    <td>7:58 AM</td>
-                    <td>8:00 AM</td>
-                    <td>8:08 AM</td>
-                    <td>8:10 AM</td>
-                    <td>8:20 AM</td>
-                    <td>8:22 AM</td>
-                    <td>8:35 AM</td>
-                </tr>
-                <tr>
-                    <td>10:40 AM</td>
-                    <td>10:55 AM</td>
-                    <td>10:57 AM</td>
-                    <td>11:05 AM</td>
-                    <td>11:07 AM</td>
-                    <td>11:15 AM</td>
-                    <td>11:20 AM</td>
-                    <td>11:40 AM</td>
-                </tr>
-                <!-- Continue adding rows as needed -->
-            </tbody>
-        </table>
+    <a href="index.html" class="back-button">&#x2190;</a>
 
-        <h2>Yas Mall Route (Daily)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Departs From Saadiyat Campus</th>
-                    <th>Arrives At Yas Mall</th>
-                    <th>Departs From Yas Mall</th>
-                    <th>Arrives At Saadiyat Campus</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>9:30 AM</td>
-                    <td>9:50 AM</td>
-                    <td>11:00 AM</td>
-                    <td>11:20 AM</td>
-                </tr>
-                <!-- Continue adding rows as needed -->
-            </tbody>
-        </table>
+    <h2>Central Souk - Al Wahda - Galleria Mall Route (Daily)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Departs From Saadiyat Campus</th>
+                <th>Arrives At Central Souk</th>
+                <th>Departs From Central Souk</th>
+                <th>Arrives At Al Wahda Mall</th>
+                <th>Departs From Al Wahda Mall</th>
+                <th>Arrives At Galleria Mall</th>
+                <th>Departs From Galleria Mall</th>
+                <th>Arrives At Saadiyat Campus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>7:55 AM</td>
+                <td>7:58 AM</td>
+                <td>8:00 AM</td>
+                <td>8:08 AM</td>
+                <td>8:10 AM</td>
+                <td>8:20 AM</td>
+                <td>8:22 AM</td>
+                <td>8:35 AM</td>
+            </tr>
+            <tr>
+                <td>10:40 AM</td>
+                <td>10:55 AM</td>
+                <td>10:57 AM</td>
+                <td>11:05 AM</td>
+                <td>11:07 AM</td>
+                <td>11:15 AM</td>
+                <td>11:20 AM</td>
+                <td>11:40 AM</td>
+            </tr>
+            <tr>
+                <td>1:15 PM</td>
+                <td>1:30 PM</td>
+                <td>1:32 PM</td>
+                <td>1:40 PM</td>
+                <td>1:42 PM</td>
+                <td>1:50 PM</td>
+                <td>1:55 PM</td>
+                <td>2:15 PM</td>
+            </tr>
+            <tr>
+                <td>4:00 PM</td>
+                <td>4:15 PM</td>
+                <td>4:17 PM</td>
+                <td>4:25 PM</td>
+                <td>4:27 PM</td>
+                <td>4:35 PM</td>
+                <td>4:40 PM</td>
+                <td>5:00 PM</td>
+            </tr>
+            <tr>
+                <td>5:30 PM</td>
+                <td>5:45 PM</td>
+                <td>5:47 PM</td>
+                <td>5:55 PM</td>
+                <td>5:57 PM</td>
+                <td>6:05 PM</td>
+                <td>6:10 PM</td>
+                <td>6:30 PM</td>
+            </tr>
+            <tr>
+                <td>6:30 PM</td>
+                <td>6:45 PM</td>
+                <td>6:47 PM</td>
+                <td>6:55 PM</td>
+                <td>6:57 PM</td>
+                <td>7:05 PM</td>
+                <td>7:10 PM</td>
+                <td>7:30 PM</td>
+            </tr>
+            <tr>
+                <td>7:40 PM</td>
+                <td>7:50 PM</td>
+                <td>7:52 PM</td>
+                <td>7:57 PM</td>
+                <td>8:00 PM</td>
+                <td>8:10 PM</td>
+                <td>8:12 PM</td>
+                <td>8:30 PM</td>
+            </tr>
+        </tbody>
+    </table>
 
-        <h2>Spinneys St. Regis - Mamsha - Louvre Route (Daily)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Departs From Saadiyat Campus</th>
-                    <th>Arrives At Spinneys St. Regis</th>
-                    <th>Departs From Spinneys St. Regis</th>
-                    <th>Arrives At Mamsha Saadiyat</th>
-                    <th>Departs From Mamsha Saadiyat</th>
-                    <th>Arrives At Louvre</th>
-                    <th>Departs From Louvre</th>
-                    <th>Arrives At Saadiyat Campus</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>10:30 AM</td>
-                    <td>10:38 AM</td>
-                    <td>10:40 AM</td>
-                    <td>10:48 AM</td>
-                    <td>10:50 AM</td>
-                    <td>10:56 AM</td>
-                    <td>10:58 AM</td>
-                    <td>11:10 AM</td>
-                </tr>
-                <!-- Continue adding rows as needed -->
-            </tbody>
-        </table>
-    </main>
+    <h2>Yas Mall Route (Daily)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Departs From Saadiyat Campus</th>
+                <th>Arrives At Yas Mall</th>
+                <th>Departs From Yas Mall</th>
+                <th>Arrives At Saadiyat Campus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9:30 AM</td>
+                <td>9:50 AM</td>
+                <td>11:00 AM</td>
+                <td>11:20 AM</td>
+            </tr>
+            <tr>
+                <td>12:15 PM</td>
+                <td>12:35 PM</td>
+                <td>1:30 PM</td>
+                <td>1:50 PM</td>
+            </tr>
+            <tr>
+                <td>4:10 PM</td>
+                <td>4:30 PM</td>
+                <td>5:30 PM</td>
+                <td>5:50 PM</td>
+            </tr>
+            <tr>
+                <td>5:40 PM</td>
+                <td>6:00 PM</td>
+                <td>7:00 PM</td>
+                <td>7:20 PM</td>
+            </tr>
+            <tr>
+                <td>8:00 PM</td>
+                <td>8:20 PM</td>
+                <td>9:30 PM</td>
+                <td>9:50 PM</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <footer>
-        &copy; 2025 NYUAD Eats. All rights reserved.
-    </footer>
+ <h2>Spinneys St. Regis - Mamsha - Louvre Route (Daily)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Departs From Saadiyat Campus</th>
+                <th>Arrives At Spinneys St. Regis</th>
+                <th>Departs From Spinneys St. Regis</th>
+                <th>Arrives At Mamsha Saadiyat</th>
+                <th>Departs From Mamsha Saadiyat</th>
+                <th>Arrives At Louvre</th>
+                <th>Departs From Louvre</th>
+                <th>Arrives At Saadiyat Campus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10:30 AM</td>
+                <td>10:38 AM</td>
+                <td> 10:40 AM</td>
+                <td>10:48 AM</td>
+                <td>10:50 AM</td>
+                <td>10:56 AM</td>
+                <td>10:58 AM</td>
+                <td>11:10 AM</td>
+            </tr>
+            <tr>
+                <td>11:45 AM</td>
+                <td>11:53 AM</td>
+                <td>11:55 AM</td>
+                <td>12:03 PM</td>
+                <td>12:05 PM</td>
+                <td>12:13 PM</td>
+                <td>12:15 PM</td>
+                <td>12:25 PM</td>
+            </tr>
+            <tr>
+                <td>4:00 PM</td>
+                <td>4:08 PM</td>
+                <td>4:10 PM</td>
+                <td>4:18 PM</td>
+                <td>4:20 PM</td>
+                <td>4:26 PM</td>
+                <td>4:28 PM</td>
+                <td>4:40 PM</td>
+            </tr>
+            <tr>
+                <td>5:15 PM</td>
+                <td>5:23 PM</td>
+                <td>5:25 PM</td>
+                <td>5:33 PM</td>
+                <td>5:35 PM</td>
+                <td>5:42 PM</td>
+                <td>5:44 PM</td>
+                <td>5:55 PM</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
