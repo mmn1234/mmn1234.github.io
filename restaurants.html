@@ -116,9 +116,10 @@
             color: white;
             font-size: 1em;
             position: fixed;
-            bottom: 0;
+            bottom: -100px; /* Initially hidden */
             width: 100%;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+            transition: bottom 0.3s ease-in-out;
         }
         @keyframes fadeInDown {
             from {
@@ -160,18 +161,27 @@
         </div>
     </main>
 
-    <footer>
+    <footer id="footer">
         &copy; 2025 NYUAD Eats. All rights reserved.
     </footer>
 
     <script>
         // Scroll Indicator Logic
         const scrollIndicator = document.getElementById('scrollIndicator');
+        const footer = document.getElementById('footer');
+
         window.onscroll = function () {
             const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollPercentage = (scrolled / scrollHeight) * 100;
             scrollIndicator.style.width = scrollPercentage + '%';
+
+            // Show footer only when scrolled to the bottom
+            if (scrolled + window.innerHeight >= document.documentElement.scrollHeight - 10) {
+                footer.style.bottom = '0';
+            } else {
+                footer.style.bottom = '-100px';
+            }
         };
     </script>
 </body>
