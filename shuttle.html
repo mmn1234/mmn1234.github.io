@@ -5,124 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuttle Timings</title>
     <style>
-      body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: white;
-    background: url('https://static.vecteezy.com/system/resources/previews/034/059/265/non_2x/fresh-delicious-fruit-cuisine-with-appetizing-variations-in-gourmet-meal-studio-food-background-photo.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-     header {
-    text-align: center;
-    padding: 60px 20px 40px;
-    color: white;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 1.2em;
-}
-header h1 {
-    font-size: 3em;
-    margin: 0;
-    animation: fadeInDown 1.5s ease;
-}
-header p {
-    font-size: 1.3em;
-    margin-top: 10px;
-    line-height: 1.6em;
-    animation: fadeInUp 1.5s ease;
-}
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-       .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    color: #42a5f5;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.2s;
-    z-index: 99;
-}
-.back-button:hover {
-    background-color: #e3f2fd;
-    transform: scale(1.1);
-}
-        .back-button:hover {
-            background-color: #e3f2fd;
-            transform: scale(1.1);
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background: url('https://img.freepik.com/free-photo/famous-city-market-with-food-trucks_23-2148445695.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
-        h2 {
+        header {
             text-align: center;
-            color: #42a5f5;
-            margin-top: 20px;
+            padding: 60px 20px 40px;
+            color: white;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeInDown 1.5s ease;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            line-height: 1.6em;
+            animation: fadeInUp 1.5s ease;
         }
         table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    border-radius: 10px;
-    overflow: hidden;
-    color: black; /* Text color to stand out */
-}
-th, td {
-    text-align: center;
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.2); /* Light border */
-}
-th {
-    background-color: #42a5f5;
-    color: white;
-    font-weight: bold;
-}
-tbody tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.05); /* Subtle row shading */
-}
-tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #42a5f5;
+            color: white;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 1em;
+            position: fixed;
+            bottom: -100px; /* Initially hidden */
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+            transition: bottom 0.5s ease;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-    <h1>Shuttle Timings</h1>
-    <p>
-        Use this guide to find the nearest bus stops to your favorite restaurants.<br>
-        If the destination is close, consider walking; if not, a cab might be your best option.
-    </p>
-</header>
-
+        <h1>Shuttle Timings</h1>
+        <p>
+            Use this guide to find the nearest bus stops to your favorite restaurants.<br>
+            If the destination is close, consider walking; if not, a cab might be your best option.
+        </p>
+    </header>
     <a href="index.html" class="back-button">&#x2190;</a>
 
     <h2>Central Souk - Al Wahda - Galleria Mall Route (Daily)</h2>
@@ -314,5 +282,23 @@ tbody tr:hover {
             </tr>
         </tbody>
     </table>
+    <footer id="footer">
+        &copy; 2025 NYUAD Eats. All rights reserved.
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const footer = document.getElementById("footer");
+            const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            if (scrolled >= scrollHeight - 50) { // Show footer when nearing the bottom
+                footer.style.bottom = "0";
+            } else {
+                footer.style.bottom = "-100px";
+            }
+        });
+    </script>
 </body>
 </html>
+
