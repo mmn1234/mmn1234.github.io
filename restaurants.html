@@ -64,13 +64,19 @@
             align-items: center;
             padding: 40px 20px;
         }
+        .description {
+            text-align: center;
+            font-size: 1.2em;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+        }
         .restaurants {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 30px;
             width: 100%;
             max-width: 1200px;
-            margin-bottom: 40px;
         }
         .restaurant {
             text-align: center;
@@ -91,8 +97,19 @@
             color: #000000;
         }
         .restaurant p {
-            margin: 0;
+            margin: 5px 0;
             color: #555;
+        }
+        .dish {
+            margin: 10px 0;
+            font-style: italic;
+            color: #333;
+        }
+        .restaurants .restaurant:nth-last-child(2),
+        .restaurants .restaurant:last-child {
+            grid-column: span 3;
+            margin: 0 auto;
+            max-width: 400px;
         }
         .legend-and-map {
             display: flex;
@@ -162,7 +179,6 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="scroll-indicator" id="scrollIndicator"></div>
@@ -174,34 +190,39 @@
     </header>
 
     <main>
+        <p class="description">Here are the top 5 restaurants! Click on their name to find their location on the map.</p>
         <div class="restaurants">
             <div class="restaurant">
-                <img src="images/restaurant1.jpg" alt="Restaurant 1">
-                <h3>Restaurant 1</h3>
-                <p>Known for its delicious burgers and fries.</p>
+                <img src="images/teabreak.jpg" alt="Tea Break">
+                <h3><a href="#legend">Tea Break</a></h3>
+                <p>Cozy spot for tea lovers and quick bites.</p>
+                <p class="dish">Famous Dish: Karak Tea</p>
             </div>
             <div class="restaurant">
-                <img src="images/restaurant2.jpg" alt="Restaurant 2">
-                <h3>Restaurant 2</h3>
-                <p>Famous for its authentic Italian pasta.</p>
+                <img src="images/alzain.jpg" alt="Al Zain">
+                <h3><a href="#legend">Al Zain</a></h3>
+                <p>Delicious Arabic grills and mezze.</p>
+                <p class="dish">Famous Dish: Mixed Grill</p>
             </div>
             <div class="restaurant">
-                <img src="images/restaurant3.jpg" alt="Restaurant 3">
-                <h3>Restaurant 3</h3>
-                <p>Cozy cafe with the best coffee in town.</p>
+                <img src="images/bosnianhut.jpg" alt="Bosnian Hut">
+                <h3><a href="#legend">Bosnian Hut</a></h3>
+                <p>Authentic Balkan cuisine with a twist.</p>
+                <p class="dish">Famous Dish: Cevapi</p>
             </div>
             <div class="restaurant">
-                <img src="images/restaurant4.jpg" alt="Restaurant 4">
-                <h3>Restaurant 4</h3>
-                <p>A delightful spot for sushi and sashimi.</p>
+                <img src="images/studentbiryani.jpg" alt="Student Biryani">
+                <h3><a href="#legend">Student Biryani</a></h3>
+                <p>Affordable and delicious Desi biryani.</p>
+                <p class="dish">Famous Dish: Chicken Biryani</p>
             </div>
             <div class="restaurant">
-                <img src="images/restaurant5.jpg" alt="Restaurant 5">
-                <h3>Restaurant 5</h3>
-                <p>Great place for vegetarian and vegan dishes.</p>
+                <img src="images/sultanbakery.jpg" alt="Sultan Bakery">
+                <h3><a href="#legend">Sultan Bakery</a></h3>
+                <p>Best pastries and baked goods in town.</p>
+                <p class="dish">Famous Dish: Cheese Manakish</p>
             </div>
         </div>
-
         <div class="legend-and-map">
             <div id="legend">
                 <h2>Legend</h2>
