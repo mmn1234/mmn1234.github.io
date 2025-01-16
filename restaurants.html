@@ -92,6 +92,13 @@
             border-radius: 50%;
             margin-bottom: 10px;
         }
+        .dish-pic {
+            margin-top: 10px;
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
         .restaurant h3 {
             margin: 10px 0 5px;
             color: #000000;
@@ -190,39 +197,45 @@
     </header>
 
     <main>
-        <p class="description">Here are the top 5 restaurants! Click on their name to find their location on the map.</p>
+        <p class="description">These are some of the best restaurants nearby. Use the map's top-left button to search for the locations!</p>
         <div class="restaurants">
             <div class="restaurant">
                 <img src="images/teabreak.jpg" alt="Tea Break">
-                <h3><a href="#legend">Tea Break</a></h3>
+                <h3>Tea Break</h3>
                 <p>Cozy spot for tea lovers and quick bites.</p>
+                <img class="dish-pic" src="images/karak.jpg" alt="Karak Tea">
                 <p class="dish">Famous Dish: Karak Tea</p>
             </div>
             <div class="restaurant">
                 <img src="images/alzain.jpg" alt="Al Zain">
-                <h3><a href="#legend">Al Zain</a></h3>
+                <h3>Al Zain</h3>
                 <p>Delicious Arabic grills and mezze.</p>
+                <img class="dish-pic" src="images/grill.jpg" alt="Mixed Grill">
                 <p class="dish">Famous Dish: Mixed Grill</p>
             </div>
             <div class="restaurant">
                 <img src="images/bosnianhut.jpg" alt="Bosnian Hut">
-                <h3><a href="#legend">Bosnian Hut</a></h3>
+                <h3>Bosnian Hut</h3>
                 <p>Authentic Balkan cuisine with a twist.</p>
+                <img class="dish-pic" src="images/cevapi.jpg" alt="Cevapi">
                 <p class="dish">Famous Dish: Cevapi</p>
             </div>
             <div class="restaurant">
                 <img src="images/studentbiryani.jpg" alt="Student Biryani">
-                <h3><a href="#legend">Student Biryani</a></h3>
+                <h3>Student Biryani</h3>
                 <p>Affordable and delicious Desi biryani.</p>
+                <img class="dish-pic" src="images/biryani.jpg" alt="Chicken Biryani">
                 <p class="dish">Famous Dish: Chicken Biryani</p>
             </div>
             <div class="restaurant">
                 <img src="images/sultanbakery.jpg" alt="Sultan Bakery">
-                <h3><a href="#legend">Sultan Bakery</a></h3>
+                <h3>Sultan Bakery</h3>
                 <p>Best pastries and baked goods in town.</p>
+                <img class="dish-pic" src="images/manakish.jpg" alt="Cheese Manakish">
                 <p class="dish">Famous Dish: Cheese Manakish</p>
             </div>
         </div>
+
         <div class="legend-and-map">
             <div id="legend">
                 <h2>Legend</h2>
