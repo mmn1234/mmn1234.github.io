@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background: url('https://img.freepik.com/premium-photo/fresh-fruit-vegetable-frame-dark-background_776894-95055.jpg') no-repeat center center fixed;
+            background: url('https://img.freepik.com/premium-photo/food-background-black-herbs-spices-utensil-top-view-with-space-text_1040174-349.jpg?ga=GA1.1.1339290658.1736784544&semt=ais_hybrid') no-repeat center center fixed;
             background-size: cover;
         }
         header {
@@ -26,15 +26,26 @@
             font-weight: bold;
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: #42a5f5;
+            z-index: 100;
+            transition: width 0.2s ease-out;
+        }
         .intro {
             text-align: center;
-            padding: 100px 20px;
+            padding: 100px 20px 40px;
             color: white;
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .intro h2 {
             font-size: 4em;
             margin: 0;
+            animation: fadeInDown 1.5s ease;
         }
         .intro p {
             font-size: 1.8em;
@@ -44,7 +55,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin: 50px 0;
+            margin-top: 30px;
         }
         .buttons a {
             display: inline-block;
@@ -57,6 +68,7 @@
             border-radius: 50px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: background 0.3s, transform 0.3s;
+            animation: fadeInUp 1.5s ease;
         }
         .buttons a:hover {
             background: rgba(255, 255, 255, 0.8);
@@ -64,20 +76,40 @@
             transform: scale(1.1);
         }
         footer {
+            display: none;
             text-align: center;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.6);
             color: white;
             font-size: 1.2em;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
     <header>
         <h1>NYUAD Eats</h1>
     </header>
@@ -94,8 +126,10 @@
         <a href="shuttle.html">Shuttle Timings</a>
         <a href="suggestions.html">Submit Suggestions</a>
     </div>
-    <footer>
+    <footer id="footer">
         &copy; 2025 NYUAD Eats. All rights reserved.
     </footer>
-</body>
-</html>
+
+    <script>
+        // Scroll Indica
+
