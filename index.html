@@ -10,21 +10,8 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background: url('https://img.freepik.com/premium-photo/fresh-fruit-vegetable-frame-dark-background_776894-95055.jpg') no-repeat center center fixed;
+            background: url('https://img.freepik.com/premium-photo/food-background-black-herbs-spices-utensil-top-view-with-space-text_1040174-349.jpg?ga=GA1.1.1339290658.1736784544&semt=ais_hybrid') no-repeat center center fixed;
             background-size: cover;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            font-weight: bold;
-            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .scroll-indicator {
             position: fixed;
@@ -36,26 +23,72 @@
             z-index: 100;
             transition: width 0.2s ease-out;
         }
-        .intro {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 0;
+            z-index: 99;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #42a5f5;
+        }
+        header {
             text-align: center;
-            padding: 100px 20px 40px;
+            padding: 80px 20px 40px;
             color: white;
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
-        .intro h2 {
-            font-size: 4em;
+        header h1 {
+            font-size: 3.5em;
             margin: 0;
             animation: fadeInDown 1.5s ease;
         }
+        .intro {
+            text-align: center;
+            padding: 60px 20px 20px;
+            color: white;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1.5s ease;
+        }
+        .intro h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
         .intro p {
-            font-size: 1.8em;
-            margin: 20px 0;
+            font-size: 1.5em;
+        }
+        .scroll-down {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 1.2em;
+            animation: fadeIn 2s infinite alternate;
         }
         .buttons {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 30px;
+            margin-top: 50px;
         }
         .buttons a {
             display: inline-block;
@@ -64,22 +97,22 @@
             text-align: center;
             text-decoration: none;
             color: white;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 50px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: background 0.3s, transform 0.3s;
-            animation: fadeInUp 1.5s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
         }
         .buttons a:hover {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             color: #333;
             transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
         }
         footer {
             display: none;
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             font-size: 1.2em;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
@@ -104,15 +137,31 @@
                 transform: translateY(0);
             }
         }
+        @keyframes fadeIn {
+            from {
+                opacity: 0.5;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="scroll-indicator" id="scrollIndicator"></div>
 
+    <nav>
+        <ul>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="shuttle.html">Shuttle Timings</a></li>
+            <li><a href="suggestions.html">Submit Suggestions</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1>NYUAD Eats</h1>
     </header>
+
     <div class="intro">
         <h2>Welcome to NYUAD Food Guide</h2>
         <p>
@@ -120,16 +169,35 @@
             You’re in the right place!<br>
             Explore awesome cheap eats near you and satisfy your cravings today.
         </p>
+        <div class="scroll-down">Scroll Down ⬇️</div>
     </div>
+
     <div class="buttons">
         <a href="restaurants.html">Restaurants</a>
         <a href="shuttle.html">Shuttle Timings</a>
         <a href="suggestions.html">Submit Suggestions</a>
     </div>
+
     <footer id="footer">
         &copy; 2025 NYUAD Eats. All rights reserved.
     </footer>
 
     <script>
-        // Scroll Indica
+        // Scroll Indicator Logic
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        const footer = document.getElementById('footer');
 
+        window.onscroll = function () {
+            const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrolled / scrollHeight) * 100;
+            scrollIndicator.style.width = scrollPercentage + '%';
+
+            // Show footer when scrolled to the bottom
+            if (scrolled + window.innerHeight >= document.body.scrollHeight) {
+                footer.style.display = 'block';
+            }
+        };
+    </script>
+</body>
+</html>
