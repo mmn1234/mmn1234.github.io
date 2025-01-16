@@ -73,34 +73,26 @@
         }
         .restaurants {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr); /* Three boxes per row */
             gap: 30px;
             width: 100%;
             max-width: 1200px;
         }
-        .restaurants {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three boxes per row */
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: center; /* Center-align rows */
-}
-.restaurant {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-.dish-pic {
-    margin-top: 10px;
-    width: 150px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+        .restaurant {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .dish-pic {
+            margin-top: 10px;
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
         .restaurant h3 {
             margin: 10px 0 5px;
             color: #000000;
@@ -157,6 +149,13 @@
             height: 600px;
             border: none;
             border-radius: 10px;
+        }
+        .map-description {
+            text-align: center;
+            font-size: 1.2em;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
         footer {
             display: block;
@@ -225,14 +224,16 @@
                 <img class="dish-pic" src="images/arayes.png" alt="Cheese Manakish">
                 <p class="dish">Famous Dish: Arayes</p>
             </div>
-             <!-- Kulfilicious -->
-    <div class="restaurant">
-        <h3>Kulfilicious</h3>
-        <p>A delightful spot for authentic Kulfi.</p>
-        <img class="dish-pic" src="images/kulfi.png" alt="Kulfi">
-        <p class="dish">Famous Dish: Kulfi</p>
-    </div>
-</div>
+            <div class="restaurant">
+                <h3>Kulfilicious</h3>
+                <p>A delightful spot for authentic Kulfi.</p>
+                <img class="dish-pic" src="images/kulfi.png" alt="Kulfi">
+                <p class="dish">Famous Dish: Kulfi</p>
+            </div>
+        </div>
+
+        <div class="map-description">
+            The yellow markers on the map indicate the bus stop locations. Use the top-left button on the map to view the closest restaurants to each bus station!
         </div>
 
         <div class="legend-and-map">
