@@ -66,15 +66,15 @@
         }
         .description {
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.5em; /* Increased font size */
             color: white;
-            margin-bottom: 30px;
+            margin-bottom: 50px; /* Added more spacing */
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .restaurants {
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* Three boxes per row */
-            gap: 30px;
+            gap: 40px; /* Increased gap for more space */
             width: 100%;
             max-width: 1200px;
         }
@@ -82,40 +82,50 @@
             text-align: center;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            padding: 20px;
+            padding: 30px; /* Increased padding */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .dish-pic {
-            margin-top: 10px;
-            width: 150px;
-            height: 100px;
+            margin-top: 20px; /* Increased margin for spacing */
+            width: 180px;
+            height: 120px;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .restaurant h3 {
-            margin: 10px 0 5px;
+            margin: 20px 0 10px;
             color: #000000;
+            font-size: 1.4em; /* Increased font size */
         }
         .restaurant p {
-            margin: 5px 0;
+            margin: 10px 0;
             color: #555;
+            font-size: 1.1em; /* Slightly larger font */
         }
         .dish {
-            margin: 10px 0;
+            margin: 15px 0;
             font-style: italic;
             color: #333;
+            font-size: 1.2em; /* Increased font size */
+        }
+        .map-description {
+            text-align: center;
+            font-size: 1.5em; /* Larger font */
+            color: white;
+            margin: 60px 0 40px; /* Added more spacing above and below */
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .legend-and-map {
             display: flex;
-            gap: 30px;
+            gap: 40px; /* Increased gap for spacing */
             max-width: 1200px;
             width: 100%;
             margin-top: 20px;
         }
         #legend {
             flex: 1;
-            padding: 20px;
+            padding: 30px; /* Increased padding */
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -124,6 +134,7 @@
         #legend h2 {
             text-align: center;
             color: #000000;
+            font-size: 1.5em; /* Larger font size */
         }
         #legend ul {
             list-style: none;
@@ -132,7 +143,7 @@
         #legend li {
             display: flex;
             align-items: center;
-            margin: 10px 0;
+            margin: 15px 0; /* Increased margin for spacing */
         }
         #legend img {
             width: 30px;
@@ -149,13 +160,6 @@
             height: 600px;
             border: none;
             border-radius: 10px;
-        }
-        .map-description {
-            text-align: center;
-            font-size: 1.2em;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
         footer {
             display: block;
@@ -232,9 +236,9 @@
             </div>
         </div>
 
-        <div class="map-description">
+        <p class="map-description">
             The yellow markers on the map indicate the bus stop locations. Use the top-left button on the map to view the closest restaurants to each bus station!
-        </div>
+        </p>
 
         <div class="legend-and-map">
             <div id="legend">
@@ -258,7 +262,6 @@
     </footer>
 
     <script>
-        // Scroll Indicator Logic
         const scrollIndicator = document.getElementById('scrollIndicator');
         const footer = document.getElementById('footer');
 
@@ -268,7 +271,6 @@
             const scrollPercentage = (scrolled / scrollHeight) * 100;
             scrollIndicator.style.width = scrollPercentage + '%';
 
-            // Show footer only when scrolled to the bottom
             if (scrolled + window.innerHeight >= document.documentElement.scrollHeight - 10) {
                 footer.style.bottom = '0';
             } else {
