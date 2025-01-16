@@ -78,27 +78,29 @@
             width: 100%;
             max-width: 1200px;
         }
-        .restaurant {
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .restaurant:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-        .dish-pic {
-            margin-top: 10px;
-            width: 100%;
-            max-width: 250px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+        .restaurants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three boxes per row */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center; /* Center-align rows */
+}
+.restaurant {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dish-pic {
+    margin-top: 10px;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
         .restaurant h3 {
             margin: 10px 0 5px;
             color: #000000;
@@ -223,6 +225,14 @@
                 <img class="dish-pic" src="images/arayes.png" alt="Cheese Manakish">
                 <p class="dish">Famous Dish: Arayes</p>
             </div>
+             <!-- Kulfilicious -->
+    <div class="restaurant">
+        <h3>Kulfilicious</h3>
+        <p>A delightful spot for authentic Kulfi.</p>
+        <img class="dish-pic" src="images/kulfi.jpg" alt="Kulfi">
+        <p class="dish">Famous Dish: Kulfi</p>
+    </div>
+</div>
         </div>
 
         <div class="legend-and-map">
