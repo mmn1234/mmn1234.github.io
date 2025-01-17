@@ -120,6 +120,16 @@
             margin: 60px 0 40px;
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
+        .map-container {
+            width: 90%;
+            max-width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+            border: 2px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
         footer {
             text-align: center;
             padding: 20px;
@@ -139,7 +149,7 @@
     </header>
 
     <main>
-        <p class="description">These are some of the best restaurants nearby. Use the map's top-left button to search for the locations!</p>
+        <p class="description">Discover the best restaurants nearby and explore their locations on the map below!</p>
         <div class="restaurants">
             <a href="https://www.google.com/maps/search/Tea+Break/" target="_blank" style="text-decoration: none;">
                 <div class="restaurant">
@@ -165,81 +175,20 @@
                     <p class="dish">Famous Dish: Cevapi</p>
                 </div>
             </a>
-            <a href="https://www.google.com/maps/search/Student+Biryani/" target="_blank" style="text-decoration: none;">
-                <div class="restaurant">
-                    <h3>Student Biryani</h3>
-                    <p>Affordable and delicious Desi biryani.</p>
-                    <img class="dish-pic" src="images/biryani1.png" alt="Chicken Biryani">
-                    <p class="dish">Famous Dish: Chicken Biryani</p>
-                </div>
-            </a>
-            <a href="https://www.google.com/maps/search/Sultan+Bakery/" target="_blank" style="text-decoration: none;">
-                <div class="restaurant">
-                    <h3>Sultan Bakery</h3>
-                    <p>Best pastries and baked goods in town.</p>
-                    <img class="dish-pic" src="images/arayes.png" alt="Cheese Manakish">
-                    <p class="dish">Famous Dish: Arayes</p>
-                </div>
-            </a>
-            <a href="https://www.google.com/maps/search/Kulfilicious/" target="_blank" style="text-decoration: none;">
-                <div class="restaurant">
-                    <h3>Kulfilicious</h3>
-                    <p>A delightful spot for authentic Kulfi.</p>
-                    <img class="dish-pic" src="images/kulfi.png" alt="Kulfi">
-                    <p class="dish">Famous Dish: Kulfi</p>
-                </div>
-            </a>
         </div>
-                <p class="map-description">
-            The yellow markers on the map indicate the bus stop locations. Use the top-left button on the map to view the closest restaurants to each bus station!
-        </p>
-
-        <div class="legend-and-map">
-            <div id="legend">
-                <h2>Legend</h2>
-                <ul>
-                    <li><img src="images/1046784.png" alt="Burger"> Fast food restaurants</li>
-                    <li><img src="images/cupcake.png" alt="Cupcake"> Dessert shops</li>
-                    <li><img src="images/coffeepic.png" alt="Dine In"> Cozy cafes</li>
-                    <li><img src="images/shawarma1.png" alt="Arab Food"> Traditional Arab food</li>
-                    <li><img src="images/newdesi.png" alt="Desi Food"> Desi food</li>
-                </ul>
-            </div>
-            <div id="map">
-                <iframe src="https://www.google.com/maps/d/embed?mid=1K6f4NIDxnYDntAB-cCwh8kpUMOfQAlw&ehbc=2E312F&noprof=1"></iframe>
-            </div>
+        <p class="map-description">Use the interactive map to explore restaurant locations and more details:</p>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/d/u/0/embed?mid=1R2s5R6PlGv5WxUMOjL23wTlQm2Y&hl=en"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
         </div>
-    </main>
-
-    <footer id="footer">
-        &copy; 2025 NYUAD Eats. All rights reserved.
-    </footer>
-
-    <script>
-        const scrollIndicator = document.getElementById('scrollIndicator');
-        const footer = document.getElementById('footer');
-
-        window.onscroll = function () {
-            const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercentage = (scrolled / scrollHeight) * 100;
-            scrollIndicator.style.width = scrollPercentage + '%';
-
-            if (scrolled + window.innerHeight >= document.documentElement.scrollHeight - 10) {
-                footer.style.bottom = '0';
-            } else {
-                footer.style.bottom = '-100px';
-            }
-        };
-    </script>
-</body>
-</html>
-
     </main>
 
     <footer>&copy; 2025 NYUAD Eats. All rights reserved.</footer>
-
 </body>
 </html>
-
-
