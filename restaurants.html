@@ -84,10 +84,11 @@
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
         }
         .restaurant:hover {
             transform: scale(1.05);
-            transition: transform 0.3s ease;
         }
         .dish-pic {
             margin-top: 20px;
@@ -120,75 +121,133 @@
             margin: 60px 0 40px;
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
-        .map-container {
-            width: 90%;
+        .legend-and-map {
+            display: flex;
+            gap: 40px;
             max-width: 1200px;
-            height: 500px;
-            margin: 0 auto;
-            border: 2px solid white;
+            width: 100%;
+            margin-top: 20px;
+        }
+        #legend {
+            flex: 1;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+        }
+        #legend h2 {
+            text-align: center;
+            color: #000000;
+            font-size: 1.5em;
+        }
+        #legend ul {
+            list-style: none;
+            padding: 0;
+        }
+        #legend li {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        #legend img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        #map {
+            flex: 2;
+            border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+        }
         footer {
+            display: block;
             text-align: center;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
             font-size: 1em;
+            position: fixed;
+            bottom: -100px;
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+            transition: bottom 0.3s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
     <div class="scroll-indicator" id="scrollIndicator"></div>
-
     <a href="index.html" class="back-button">&#x2190;</a>
-
     <header>
         <h1>Explore Restaurants Near You</h1>
     </header>
-
     <main>
-        <p class="description">Discover the best restaurants nearby and explore their locations on the map below!</p>
+        <p class="description">These are some of the best restaurants nearby. Click on them to explore their location on Google Maps!</p>
         <div class="restaurants">
-            <a href="https://www.google.com/maps/search/Tea+Break/" target="_blank" style="text-decoration: none;">
-                <div class="restaurant">
-                    <h3>Tea Break</h3>
-                    <p>Cozy spot for tea lovers and quick bites.</p>
-                    <img class="dish-pic" src="images/karak.png" alt="Karak Tea">
-                    <p class="dish">Famous Dish: Karak Tea</p>
-                </div>
-            </a>
-            <a href="https://www.google.com/maps/search/Al+Zain/" target="_blank" style="text-decoration: none;">
-                <div class="restaurant">
-                    <h3>Al Zain</h3>
-                    <p>Delicious Arabic grills and mezze.</p>
-                    <img class="dish-pic" src="images/shawarmaalzain.png" alt="Shawarma">
-                    <p class="dish">Famous Dish: Chicken/Beef Shawarma</p>
-                </div>
-            </a>
-            <a href="https://www.google.com/maps/search/Bosnian+Hut/" target="_blank" style="text-decoration: none;">
-                <div class="restaurant">
-                    <h3>Bosnian Hut</h3>
-                    <p>Authentic Balkan cuisine with a twist.</p>
-                    <img class="dish-pic" src="images/kebab.png" alt="Cevapi">
-                    <p class="dish">Famous Dish: Cevapi</p>
-                </div>
-            </a>
+            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example1', '_blank')">
+                <h3>Tea Break</h3>
+                <p>Cozy spot for tea lovers and quick bites.</p>
+                <img class="dish-pic" src="images/karak.png" alt="Karak Tea">
+                <p class="dish">Famous Dish: Karak Tea</p>
+            </div>
+            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example2', '_blank')">
+                <h3>Al Zain</h3>
+                <p>Delicious Arabic grills and mezze.</p>
+                <img class="dish-pic" src="images/shawarmaalzain.png" alt="Shawarma">
+                <p class="dish">Famous Dish: Chicken/Beef Shawarma</p>
+            </div>
+            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example3', '_blank')">
+                <h3>Bosnian Hut</h3>
+                <p>Authentic Balkan cuisine with a twist.</p>
+                <img class="dish-pic" src="images/kebab.png" alt="Cevapi">
+                <p class="dish">Famous Dish: Cevapi</p>
+            </div>
+            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example4', '_blank')">
+                <h3>Student Biryani</h3>
+                <p>Affordable and delicious Desi biryani.</p>
+                <img class="dish-pic" src="images/biryani1.png" alt="Chicken Biryani">
+                <p class="dish">Famous Dish: Chicken Biryani</p>
+            </div>
+            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example5', '_blank')">
+                <h3>Sultan Bakery</h3>
+                <p>Best pastries and baked goods in town.</p>
+                <img class="dish-pic" src="images/arayes.png" alt="Cheese Manakish">
+                <p class="dish">Famous Dish: Cheese Manakish</p>
+            </div>
+            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example6', '_blank')">
+                <h3>Pinkberry</h3>
+                <p>Refreshing frozen yogurt with amazing flavors.</p>
+                <img class="dish-pic" src="images/manakesh.png" alt="Frozen Yogurt">
+                <p class="dish">Famous Dish: Strawberry Yogurt</p>
+            </div>
         </div>
-        <p class="map-description">Use the interactive map to explore restaurant locations and more details:</p>
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/d/u/0/embed?mid=1R2s5R6PlGv5WxUMOjL23wTlQm2Y&hl=en"
-                width="100%"
-                height="100%"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
+        <p class="map-description">Find the restaurants on this map:</p>
+        <div class="legend-and-map">
+            <div id="legend">
+                <h2>Map Legend</h2>
+                <ul>
+                    <li><img src="images/legend1.png" alt="Tea Break Icon"> Tea Break</li>
+                    <li><img src="images/legend2.png" alt="Student Biryani Icon">Student Biryani</li>
+                    <li><img src="images/legend3.png" alt="Arayes Icon"> Arayes</li>
+                    <li><img src="images/legend4.png" alt="Desi Grill Icon"> Grill/Biryani Favorite!</li>
+                </ul>
+            </div>
         </div>
-    </main>
-
-    <footer>&copy; 2025 NYUAD Eats. All rights reserved.</footer>
 </body>
 </html>
