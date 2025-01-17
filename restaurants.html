@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurants</title>
     <style>
-        /* Same styling as before */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -67,15 +67,15 @@
         }
         .description {
             text-align: center;
-            font-size: 1.5em; 
+            font-size: 1.5em; /* Increased font size */
             color: white;
-            margin-bottom: 50px;
+            margin-bottom: 50px; /* Added more spacing */
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .restaurants {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 40px;
+            grid-template-columns: repeat(3, 1fr); /* Three boxes per row */
+            gap: 40px; /* Increased gap for more space */
             width: 100%;
             max-width: 1200px;
         }
@@ -83,11 +83,11 @@
             text-align: center;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            padding: 30px; 
+            padding: 30px; /* Increased padding */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .dish-pic {
-            margin-top: 20px; 
+            margin-top: 20px; /* Increased margin for spacing */
             width: 180px;
             height: 120px;
             object-fit: cover;
@@ -97,36 +97,36 @@
         .restaurant h3 {
             margin: 20px 0 10px;
             color: #000000;
-            font-size: 1.4em; 
+            font-size: 1.4em; /* Increased font size */
         }
         .restaurant p {
             margin: 10px 0;
             color: #555;
-            font-size: 1.1em;
+            font-size: 1.1em; /* Slightly larger font */
         }
         .dish {
             margin: 15px 0;
             font-style: italic;
             color: #333;
-            font-size: 1.2em;
+            font-size: 1.2em; /* Increased font size */
         }
         .map-description {
             text-align: center;
-            font-size: 1.5em; 
+            font-size: 1.5em; /* Larger font */
             color: white;
-            margin: 60px 0 40px;
+            margin: 60px 0 40px; /* Added more spacing above and below */
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .legend-and-map {
             display: flex;
-            gap: 40px;
+            gap: 40px; /* Increased gap for spacing */
             max-width: 1200px;
             width: 100%;
             margin-top: 20px;
         }
         #legend {
             flex: 1;
-            padding: 30px; 
+            padding: 30px; /* Increased padding */
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -135,7 +135,7 @@
         #legend h2 {
             text-align: center;
             color: #000000;
-            font-size: 1.5em; 
+            font-size: 1.5em; /* Larger font size */
         }
         #legend ul {
             list-style: none;
@@ -144,7 +144,7 @@
         #legend li {
             display: flex;
             align-items: center;
-            margin: 15px 0;
+            margin: 15px 0; /* Increased margin for spacing */
         }
         #legend img {
             width: 30px;
@@ -170,7 +170,7 @@
             color: white;
             font-size: 1em;
             position: fixed;
-            bottom: -100px; 
+            bottom: -100px; /* Initially hidden */
             width: 100%;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
             transition: bottom 0.3s ease-in-out;
@@ -199,67 +199,85 @@
     <main>
         <p class="description">These are some of the best restaurants nearby. Use the map's top-left button to search for the locations!</p>
         <div class="restaurants">
-            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example1', '_blank')">
+            <div class="restaurant">
                 <h3>Tea Break</h3>
                 <p>Cozy spot for tea lovers and quick bites.</p>
                 <img class="dish-pic" src="images/karak.png" alt="Karak Tea">
                 <p class="dish">Famous Dish: Karak Tea</p>
             </div>
-            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example2', '_blank')">
+            <div class="restaurant">
                 <h3>Al Zain</h3>
                 <p>Delicious Arabic grills and mezze.</p>
                 <img class="dish-pic" src="images/shawarmaalzain.png" alt="Shawarma">
                 <p class="dish">Famous Dish: Chicken/Beef Shawarma</p>
             </div>
-            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example3', '_blank')">
+            <div class="restaurant">
                 <h3>Bosnian Hut</h3>
                 <p>Authentic Balkan cuisine with a twist.</p>
                 <img class="dish-pic" src="images/kebab.png" alt="Cevapi">
                 <p class="dish">Famous Dish: Cevapi</p>
             </div>
-            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example4', '_blank')">
+            <div class="restaurant">
                 <h3>Student Biryani</h3>
                 <p>Affordable and delicious Desi biryani.</p>
                 <img class="dish-pic" src="images/biryani1.png" alt="Chicken Biryani">
                 <p class="dish">Famous Dish: Chicken Biryani</p>
             </div>
-            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example5', '_blank')">
+            <div class="restaurant">
                 <h3>Sultan Bakery</h3>
                 <p>Best pastries and baked goods in town.</p>
                 <img class="dish-pic" src="images/arayes.png" alt="Cheese Manakish">
                 <p class="dish">Famous Dish: Arayes</p>
             </div>
-            <!-- Replaced Pinkberry with Kulfilicious -->
-            <div class="restaurant" onclick="window.open('https://goo.gl/maps/example6', '_blank')">
+            <div class="restaurant">
                 <h3>Kulfilicious</h3>
-                <p>Famous for its delicious kulfi and desserts!</p>
+                <p>A delightful spot for authentic Kulfi.</p>
                 <img class="dish-pic" src="images/kulfi.png" alt="Kulfi">
                 <p class="dish">Famous Dish: Kulfi</p>
             </div>
         </div>
 
-        <p class="map-description">Explore these restaurants on the map below!</p>
+        <p class="map-description">
+            The yellow markers on the map indicate the bus stop locations. Use the top-left button on the map to view the closest restaurants to each bus station!
+        </p>
+
         <div class="legend-and-map">
             <div id="legend">
                 <h2>Legend</h2>
                 <ul>
-                    <li><img src="images/marker1.png" alt="Tea Break"> Tea Break</li>
-                    <li><img src="images/marker2.png" alt="Al Zain"> Al Zain</li>
-                    <li><img src="images/marker3.png" alt="Bosnian Hut"> Bosnian Hut</li>
-                    <li><img src="images/marker4.png" alt="Student Biryani"> Student Biryani</li>
-                    <li><img src="images/marker5.png" alt="Sultan Bakery"> Sultan Bakery</li>
-                    <li><img src="images/marker6.png" alt="Kulfilicious"> Kulfilicious</li>
+                    <li><img src="images/1046784.png" alt="Burger"> Fast food restaurants</li>
+                    <li><img src="images/cupcake.png" alt="Cupcake"> Dessert shops</li>
+                    <li><img src="images/coffeepic.png" alt="Dine In"> Cozy cafes</li>
+                    <li><img src="images/shawarma1.png" alt="Arab Food"> Traditional Arab food</li>
+                    <li><img src="images/newdesi.png" alt="Desi Food"> Desi food</li>
                 </ul>
             </div>
             <div id="map">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Qk9h-_1bmt8t2Hj27b3Bggxz-lE" title="Restaurant Map"></iframe>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1K6f4NIDxnYDntAB-cCwh8kpUMOfQAlw&ehbc=2E312F&noprof=1"></iframe>
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Explore Restaurants. All rights reserved.</p>
+    <footer id="footer">
+        &copy; 2025 NYUAD Eats. All rights reserved.
     </footer>
 
+    <script>
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        const footer = document.getElementById('footer');
+
+        window.onscroll = function () {
+            const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrolled / scrollHeight) * 100;
+            scrollIndicator.style.width = scrollPercentage + '%';
+
+            if (scrolled + window.innerHeight >= document.documentElement.scrollHeight - 10) {
+                footer.style.bottom = '0';
+            } else {
+                footer.style.bottom = '-100px';
+            }
+        };
+    </script>
 </body>
 </html>
