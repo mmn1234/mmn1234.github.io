@@ -190,6 +190,51 @@
                 </div>
             </a>
         </div>
+                <p class="map-description">
+            The yellow markers on the map indicate the bus stop locations. Use the top-left button on the map to view the closest restaurants to each bus station!
+        </p>
+
+        <div class="legend-and-map">
+            <div id="legend">
+                <h2>Legend</h2>
+                <ul>
+                    <li><img src="images/1046784.png" alt="Burger"> Fast food restaurants</li>
+                    <li><img src="images/cupcake.png" alt="Cupcake"> Dessert shops</li>
+                    <li><img src="images/coffeepic.png" alt="Dine In"> Cozy cafes</li>
+                    <li><img src="images/shawarma1.png" alt="Arab Food"> Traditional Arab food</li>
+                    <li><img src="images/newdesi.png" alt="Desi Food"> Desi food</li>
+                </ul>
+            </div>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1K6f4NIDxnYDntAB-cCwh8kpUMOfQAlw&ehbc=2E312F&noprof=1"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        &copy; 2025 NYUAD Eats. All rights reserved.
+    </footer>
+
+    <script>
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        const footer = document.getElementById('footer');
+
+        window.onscroll = function () {
+            const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrolled / scrollHeight) * 100;
+            scrollIndicator.style.width = scrollPercentage + '%';
+
+            if (scrolled + window.innerHeight >= document.documentElement.scrollHeight - 10) {
+                footer.style.bottom = '0';
+            } else {
+                footer.style.bottom = '-100px';
+            }
+        };
+    </script>
+</body>
+</html>
+
     </main>
 
     <footer>&copy; 2025 NYUAD Eats. All rights reserved.</footer>
